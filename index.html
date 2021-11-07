@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color game vue</title>
     <script src="node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div id="app">
-        <button>
+        <button v-on:click="newGame">
           NOUVELLE PARTIE
         </button>
         <hr>
           ** Nous afficherons ici le score **
         <hr>
         <div>
-          <span class="carre"></span>
-          <span class="carre"></span>
+          <span class="carre" v-bind:class="{ bleu: hautGauche }"></span>
+          <span class="carre" v-bind:class="{ rouge: hautDroite }"></span>
         </div>
         <div>
-          <span class="carre"></span>
-          <span class="carre"></span>
+          <span class="carre" v-bind:class="{ vert: basGauche }"></span>
+          <span class="carre" v-bind:class="{ jaune: basDroite }"></span>
         </div>
+        <hr>
+        <span> sequence :</span>
+        <pre>{{ sequence }}</pre>
       </div>
+   
 
 
-      <script src="script.js"></script>
+      <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
