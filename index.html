@@ -18,12 +18,12 @@
           ** Nous afficherons ici le score **
         <hr>
         <div>
-          <span class="carre" v-bind:class="{ bleu: hautGauche }"></span>
-          <span class="carre" v-bind:class="{ rouge: hautDroite }"></span>
+          <span class="carre" v-on:click="selectSquare('hautGauche')"  v-bind:class="{ bleu: hautGauche }"></span>
+          <span class="carre" v-on:click="selectSquare('hautDroite')"  v-bind:class="{ rouge: hautDroite }"></span>
         </div>
         <div>
-          <span class="carre" v-bind:class="{ vert: basGauche }"></span>
-          <span class="carre" v-bind:class="{ jaune: basDroite }"></span>
+          <span class="carre" v-on:click="selectSquare('basGauche')"  v-bind:class="{ vert: basGauche }"></span>
+          <span class="carre"  v-on:click="selectSquare('basDroite')"  v-bind:class="{ jaune: basDroite }"></span>
         </div>
         <hr>
         <span> sequence :</span>
